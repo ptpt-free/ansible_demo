@@ -1,0 +1,3 @@
+---
+user_list:
+  - { name : 'handson', password : "{{ 'handson' | password_hash('sha512') }}" , homedir: '/home/handson' }

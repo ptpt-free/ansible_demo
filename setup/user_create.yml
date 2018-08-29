@@ -1,0 +1,7 @@
+---
+- hosts: web
+  name: handson user create
+  become: yes
+  
+  roles:
+    - user

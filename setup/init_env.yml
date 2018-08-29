@@ -1,0 +1,7 @@
+---
+- hosts: web
+  name: setup handson
+  remote_user: handson
+  
+  roles:
+    - init

@@ -1,0 +1,8 @@
+---
+install_yum:
+  - git
+  - ansible
+  - unzip
+
+zip_name:
+  - terraform_0.11.8_linux_amd64.zip

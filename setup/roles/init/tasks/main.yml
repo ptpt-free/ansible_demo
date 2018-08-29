@@ -1,0 +1,31 @@
+---
+- name: make handson directory
+  file:
+    path: /home/handson
+    state: directory
+    mode: 0775
+
+- name: install git
+  yum:
+    name: "{{ item }}"
+    state: present
+  remote_user: root
+  with_items: "{{ install_yum }}"
+
+- name: clone handson source
+  git:
+    repo: 'https://github.com/ptpt-free/ansible_demo.git'
+    dest: /home/handson/ansible-handson
+
+- name: curl terraform
+  get_url:
+    url: https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip
+    dest: /home/handson/
+
+- name: unzip terraform
+  unarchive:
+    remote_src: yes
+    src: /home/handson/{{ item }}
+    dest: /usr/local/bin
+  remote_user: root
+  with_items: "{{ zip_name }}"

@@ -1,0 +1,10 @@
+---
+# create user
+- name: create user
+  user:
+    name: "{{ item.name }}"
+    password: "{{ item.password }}"
+    state: present
+    generate_ssh_key: yes
+  with_items: "{{ user_list }}"
+  when: user_list
