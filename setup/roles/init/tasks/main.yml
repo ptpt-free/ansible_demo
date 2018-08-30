@@ -9,7 +9,6 @@
   yum:
     name: "{{ item }}"
     state: present
-  remote_user: root
   with_items: "{{ install_yum }}"
 
 - name: clone handson source
@@ -27,5 +26,4 @@
     remote_src: yes
     src: /home/handson/{{ item }}
     dest: /usr/local/bin
-  remote_user: root
   with_items: "{{ zip_name }}"
