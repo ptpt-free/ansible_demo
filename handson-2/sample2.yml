@@ -1,0 +1,11 @@
+---
+- hosts: web
+  name: sample yaml
+  tasks:
+    - name: install module
+      yum:
+        name: "{{item}}"
+        state: present
+      with_items:
+        - httpd
+        - mod_wsgi

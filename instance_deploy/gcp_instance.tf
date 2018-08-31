@@ -1,10 +1,10 @@
-resource "google_compute_instance" "default" {
+/*resource "google_compute_instance" "handson" {
   //インスタンス名、マシンタイプ、作成するゾーンの選択
   name         = "handson-instance"
   machine_type = "f1-micro"
   zone         = "asia-northeast1-a"
   //ネットワークタグを記載
-  tags = ["gce-nw"]
+  tags = ["http-service"]
 
   //立ち上げるOSを選択。
   boot_disk {
@@ -12,6 +12,12 @@ resource "google_compute_instance" "default" {
       image = "centos-cloud/centos-7"
       size = "10"
     }
+  }
+
+  //プリミティブVMとして作成
+  scheduling {
+    preemptible = true
+    automatic_restart = false
   }
 
   //ネットワークインタフェース情報を記載。
@@ -28,4 +34,4 @@ resource "google_compute_instance" "default" {
   service_account {
     scopes = ["userinfo-email", "compute-ro", "storage-ro"]
   }
-}
+}*/

@@ -1,8 +1,0 @@
----
-- hosts: web
-  name: setup handson
-  remote_user: student
-  become: yes
-  
-  roles:
-    - init

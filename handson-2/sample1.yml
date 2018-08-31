@@ -1,0 +1,11 @@
+---
+- hosts: web
+  name: sample yaml
+  vars:
+    install_modules:
+      - httpd
+  tasks:
+    - name: install module
+      yum:
+        name: "{{install_modules}}"
+        state: present

@@ -1,0 +1,10 @@
+---
+- hosts: web
+  name: clear handson
+  become: yes
+
+  tasks:
+    - name: delete apache
+      yum:
+        name: httpd
+        state: absent
