@@ -1,4 +1,4 @@
-/*resource "google_compute_instance" "handson" {
+resource "google_compute_instance" "handson" {
   //インスタンス名、マシンタイプ、作成するゾーンの選択
   name         = "handson-instance"
   machine_type = "f1-micro"
@@ -34,4 +34,4 @@
   service_account {
     scopes = ["userinfo-email", "compute-ro", "storage-ro"]
   }
-}*/
+}
