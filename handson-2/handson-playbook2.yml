@@ -1,6 +1,7 @@
 ---
 - hosts: web
   name: install Apache web server
+  become: yes
   vars:
     install_module:
       - httpd
