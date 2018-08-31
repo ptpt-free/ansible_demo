@@ -4,7 +4,7 @@ resource "google_compute_instance" "handson" {
   machine_type = "f1-micro"
   zone         = "asia-northeast1-a"
   //ネットワークタグを記載
-  tags = ["http-service"]
+  tags = ["http-server"]
 
   //立ち上げるOSを選択。
   boot_disk {
