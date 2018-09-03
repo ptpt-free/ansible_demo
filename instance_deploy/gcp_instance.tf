@@ -30,6 +30,11 @@ resource "google_compute_instance" "handson" {
     }
   }
 
+  metadata {
+    "block-project-ssh-keys" = "true"
+    "sshKeys" = "${var.test_ssh_keys}"
+  }
+
   //service_accountの設定
   service_account {
     scopes = ["userinfo-email", "compute-ro", "storage-ro"]
