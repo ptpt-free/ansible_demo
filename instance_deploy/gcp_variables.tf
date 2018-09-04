@@ -1,6 +1,6 @@
 variable "test_ssh_keys" {
    type = "string"
    default = <<EOF
-yoshiki_tada:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDRuXntEmJwvYamv5SHJMNltlSynYRIr0yiXr/XnvCmPx/lUPVy0MtMQLhi4TMlK1opk4gzSAWscn29QWumQBjA+F2BkxUmrMj2tOrUy5ekE5HH6bzQh0Be2VKzZDUcZppPJZOobFklwx+iaD36Ix9JFBJV2TmNKsQfG2GJesTbdduywDzkLYUBKIjrhnSEVwGqi6xvLQmZa3gXqlXYlgGM/guIsPwPpDUlEAhEBQ/30GRnv0/E3hcoE6+eEHPxdMZuGKV9dN4P7/xx9fk0NNLkjoUXLtPgACklbfxt8Z7BtaBKTmSCpj9ImZEPGLGAOJ/fjFZDEGqlwqkOyvib6kCh yoshiki_tada@cs-6000-devshell-vm-d4e1c198-6c69-48bd-a07d-337a28caf4eb
+   "SSH-KEY"
 EOF
 }
