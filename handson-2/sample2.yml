@@ -1,6 +1,7 @@
 ---
 - hosts: web
   name: sample yaml
+  become: yes
   tasks:
     - name: install module
       yum:
